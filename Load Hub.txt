@@ -1,0 +1,81 @@
+if game.PlaceId == 4480809144 or game.PlaceId == 10384852727 or game.PlaceId == 10384858885 then
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Ben Client Granny Múltiplayer| Select one Script",
+   Icon = "Sparkles", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Ben Client | Select one Script",
+   LoadingSubtitle = "by Benjamim",
+   ShowText = "Ben Client Granny", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local ScriptHub = Window:CreateTab("Scripts Hub", "flame")
+
+local Button = ScriptHub:CreateButton({
+   Name = "Granny Multiplayer | Capítulo 1",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/joaolisi130-star/Ben-Client-Granny/refs/heads/main/obfuscated_script-Ben Cliente Granny 1.lua.txt", true))()
+   end,
+})
+
+local Button = ScriptHub:CreateButton({
+   Name = "Granny Multiplayer | Capítulo 2",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/joaolisi130-star/Ben-Client-Granny/refs/heads/main/obfuscated_script-1782687149858 Granny 2.lua.txt", true))()
+   end,
+})
+
+local Button = ScriptHub:CreateButton({
+   Name = "Granny Multiplayer | Captitulo Final o 3",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/joaolisi130-star/Ben-Client-Granny/refs/heads/main/nabababababbababa.lua.txt", true))()
+   end,
+})
+
+local games = Window:CreateTab("Supported Games", "gamepad-2")
+
+local Label = games:CreateLabel("🟢 Granny Multiplayer | Chapter 1 [Keyless]", nil, Color3.fromRGB(255, 255, 255), false)
+
+local Label = games:CreateLabel("🟢 Granny Multiplayer | Chapter 2 [Keyless]", nil, Color3.fromRGB(255, 255, 255), false)
+
+local Label = games:CreateLabel("🟢 Granny Multiplayer | Chapter 3 [Keyless]", nil, Color3.fromRGB(255, 255, 255), false)
+
+local ui = Window:CreateTab("UI", "settings")
+
+local Button = ui:CreateButton({
+   Name = "Distruir a UI(Tipo a Ui some que dizer se fechou o Hub)",
+   Callback = function()
+   Rayfield:Destroy()
+   end,
+})
+end
